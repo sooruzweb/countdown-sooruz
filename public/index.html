@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Countdown Soöruz — test</title>
+<style>
+  body{margin:0;background:#111;color:#eee;font:14px/1.5 system-ui,sans-serif;display:grid;gap:24px;justify-items:center;padding:32px}
+  img{width:100%;max-width:600px;height:auto;display:block}
+  button{background:#ffdd00;border:0;padding:8px 14px;font-weight:700;cursor:pointer}
+  p{margin:0;opacity:.7}
+</style>
+</head>
+<body>
+  <p>Date de fin réelle</p>
+  <img id="real" alt="Compte à rebours">
+  <p>Test : fin dans 10 secondes</p>
+  <img id="test" alt="Test fin imminente">
+  <button onclick="load()">Recharger</button>
+<script>
+  function load(){
+    const t = Date.now();
+    document.getElementById('real').src = '/countdown.gif?t=' + t;
+    const end = new Date(t + 10000).toISOString();
+    document.getElementById('test').src = '/countdown.gif?end=' + encodeURIComponent(end) + '&t=' + t;
+  }
+  load();
+</script>
+</body>
+</html>

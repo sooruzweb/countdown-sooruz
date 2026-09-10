@@ -1,0 +1,4 @@
+# Pas de build : site statique (public/) + une fonction (netlify/functions/countdown)
+[build]
+  publish = "public"
+  functions = "netlify/functions"
