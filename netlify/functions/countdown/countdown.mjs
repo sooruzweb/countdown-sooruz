@@ -4,7 +4,7 @@ import { inflateSync } from "node:zlib";
 import { W, H, PALETTE, LAYOUT, GLYPHS, LAYERS } from "./glyphs.mjs";
 
 // ⚠️ Date de fin (heure de Paris, +02:00 en septembre). Surchargeable pour tester : ?end=2026-09-28T23:59:59%2B02:00
-const END = "2026-09-28T23:59:59+02:00";
+const END = "2026-09-14T23:59:59+02:00";
 
 const SECONDS = 60;      // durée du GIF
 const BLINK = false;     // true = deux-points qui clignotent (GIF ~300 Ko au lieu de ~65 Ko)
